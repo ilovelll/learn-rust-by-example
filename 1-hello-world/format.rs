@@ -74,4 +74,71 @@ fn main() {
 
   // pretty printing with {:#?} 
   println!("{:#?}", peter);
+
+
+  // struct Complex(f32, f32);
+  #[derive(Debug)]
+  struct Complex {
+    real: f32,
+    imag: f32
+  }
+
+  impl fmt::Display for Complex {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+      write!(f, "{0} +{1}i", self.real, self.imag)
+    }
+  }
+  let c = Complex{ real: 3.3, imag: 7.2};
+  println!("Display: {}", c);
+  println!("Debug: {:?}", c);
+
+
+  struct List(Vec<i32>);
+
+  impl fmt::Display for List {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+      let vec = &self.0;
+
+      // use `?` to check no error and continue;
+      write!(f, "[")?;
+
+      for (count, v) in vec.iter().enumerate() {
+        if count != 0 {
+          write!(f, ", ")?;
+        }
+        write!(f, "{}: {}", count, v)?;
+      }
+
+      write!(f, "]")
+    }
+  }
+
+
+  let v = List(vec![1,2,3]);
+  println!("{}", v);
+
+
+  #[derive(Debug)]
+  struct Color {
+    red: u8,
+    green: u8,
+    blue: u8,
+  }
+
+  impl fmt::Display for Color {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+      write!(f, "RGB ({0}, {1}, {2}) 0x{0:02X}{1:02X}{2:02X}", self.red, self.green, self.blue)
+    }
+  }
+
+  for color in [
+    Color { red: 128, green: 255, blue: 90 },
+    Color { red: 0, green: 3, blue: 254 },
+    Color { red: 0, green: 0, blue: 0 },
+  ].iter() {
+      // Switch this to use {} once you've added an implementation
+      // for fmt::Display
+    println!("{:?}", *color);
+    println!("{}", *color);
+  }
 }
