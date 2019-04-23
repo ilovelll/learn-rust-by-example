@@ -1,0 +1,11 @@
+[workspace]
+members = [
+  "ch3-custom-types"
+]
+[package]
+name = "learn-rust-by-example"
+version = "0.1.0"
+authors = ["Johny.li <johny.li@selmit.com>"]
+edition = "2018"
+
+[dependencies]
