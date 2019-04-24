@@ -30,4 +30,11 @@ fn main() {
 
     let cicle = Circle { radius: 4};
     println!("{}", cicle.to_string());
+
+    // type inference or 'turbofish' ::<>
+    let parsed: i32 = "5".parse().unwrap();
+    let turbo_parsed = "10".parse::<i32>().unwrap();
+
+    let sum = parsed + turbo_parsed;
+    println!("Sum: {:?}", sum);
 }
