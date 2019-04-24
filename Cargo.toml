@@ -1,6 +1,9 @@
 [workspace]
 members = [
-  "ch3-custom-types"
+  "ch3-custom-types",
+  "ch4-variable-bindings",
+  "ch5-types",
+  "ch6-conversion"
 ]
 [package]
 name = "learn-rust-by-example"

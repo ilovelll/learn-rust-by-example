@@ -5,6 +5,18 @@ name = "ch3-custom-types"
 version = "0.1.0"
 
 [[package]]
+name = "ch4-variable-bindings"
+version = "0.1.0"
+
+[[package]]
+name = "ch5-types"
+version = "0.1.0"
+
+[[package]]
+name = "ch6-conversion"
+version = "0.1.0"
+
+[[package]]
 name = "learn-rust-by-example"
 version = "0.1.0"
 
