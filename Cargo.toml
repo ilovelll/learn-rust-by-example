@@ -3,7 +3,8 @@ members = [
   "ch3-custom-types",
   "ch4-variable-bindings",
   "ch5-types",
-  "ch6-conversion"
+  "ch6-conversion",
+  "ch8-flow-control"
 ]
 [package]
 name = "learn-rust-by-example"
