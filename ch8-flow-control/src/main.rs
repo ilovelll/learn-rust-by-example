@@ -187,6 +187,85 @@ fn main() {
         n @ 13... 19 => println!("Im a teen of age {:?}", n),
         n            => println!("I'm a old person of age {:?}", n),
     }
+
+
+    // if let is cleaner with enums
+    let number = Some(6);
+    let letter: Option<i32> = None;
+    let emotion: Option<i32> = None;
+
+    if let Some(i) = number {
+        println!("Matched {:?}", i);
+    }
+    
+    if let Some(i) = letter {
+        println!("Matched {:?}", i);
+    } else {
+        println!("Didn't match a number.");
+    }
+
+    let i_like_letters = false;
+
+    if let Some(i) = emotion {
+        println!("Matched {:?}", i);
+    } else if i_like_letters {
+        println!("Didn't match a number.");
+    } else {
+        println!("Didn't match a number. emotion :)");
+    }
+
+    enum Foot {
+        Bar,
+        Baz,
+        Qux(u32)
+    }
+
+
+    let a = Foot::Bar;
+    let b = Foot::Baz;
+    let c = Foot::Qux(100);
+
+    if let Foot::Bar = a {
+        println!("a is footer");
+    }
+
+    if let Foot::Qux(i) = c {
+        println!("c is {}", i);
+    }
+
+    // while let is same with enums
+
+    let mut optional = Some(4);
+
+    // Repeatedly try this test.
+    // loop {
+    //     match optional {
+    //         // If `optional` destructures, evaluate the block.
+    //         Some(i) => {
+    //             if i > 9 {
+    //                 println!("Greater than 9, quit!");
+    //                 optional = None;
+    //             } else {
+    //                 println!("`i` is `{:?}`. Try again.", i);
+    //                 optional = Some(i + 1);
+    //             }
+    //             // ^ Requires 3 indentations!
+    //         },
+    //         // Quit the loop when the destructure fails:
+    //         _ => { break; }
+    //         // ^ Why should this be required? There must be a better way!
+    //     }
+    // }
+    while let Some(i) = optional {
+        if i > 9 {
+            println!("Greater than 9, quit");
+            optional = None;
+        } else {
+            println!("`i` is `{:?}`. Try again.", i);
+            optional = Some(i + 1);
+        }
+
+    }
 }
 
 fn age() -> u32 {

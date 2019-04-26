@@ -21,6 +21,10 @@ name = "ch8-flow-control"
 version = "0.1.0"
 
 [[package]]
+name = "ch9-functions"
+version = "0.1.0"
+
+[[package]]
 name = "learn-rust-by-example"
 version = "0.1.0"
 
