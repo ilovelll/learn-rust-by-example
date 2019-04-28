@@ -1,5 +1,5 @@
-*/*.exe
-*/*.pdb
+**/*.exe
+**/*.pdb
 
 #Added by cargo
 #
