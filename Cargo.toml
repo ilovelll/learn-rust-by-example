@@ -5,7 +5,8 @@ members = [
   "ch5-types",
   "ch6-conversion",
   "ch8-flow-control",
-  "ch9-functions"
+  "ch9-functions",
+  "ch10-modules"
 ]
 [package]
 name = "learn-rust-by-example"
