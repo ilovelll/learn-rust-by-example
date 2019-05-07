@@ -5,6 +5,10 @@ name = "ch10-modules"
 version = "0.1.0"
 
 [[package]]
+name = "ch14-generics"
+version = "0.1.0"
+
+[[package]]
 name = "ch3-custom-types"
 version = "0.1.0"
 
