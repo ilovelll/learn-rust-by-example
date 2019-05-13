@@ -25,12 +25,13 @@ fn main() {
 
         n += 1;
     }
+    println!("===================");
 
     // a..b or a..=b
     for n in 1..=100 {
         match n {
             // `if condition` part is a guard
-            x if x % 15 ==0 => println!("fizzbuzz"),
+            x if x % 15 ==0 => println!("fizzbuzz, {}", x),
             x if x % 3 == 0 => println!("fizz"),
             x if x % 5 == 0 => println!("buzz"),
             _ => println!("{}", n),
