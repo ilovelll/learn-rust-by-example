@@ -13,6 +13,10 @@ name = "ch15-scoping-rules"
 version = "0.1.0"
 
 [[package]]
+name = "ch16-traits"
+version = "0.1.0"
+
+[[package]]
 name = "ch3-custom-types"
 version = "0.1.0"
 

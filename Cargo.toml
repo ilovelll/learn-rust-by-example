@@ -8,7 +8,8 @@ members = [
   "ch9-functions",
   "ch10-modules",
   "ch14-generics",
-  "ch15-scoping-rules"
+  "ch15-scoping-rules",
+  "ch16-traits"
 ]
 [package]
 name = "learn-rust-by-example"
