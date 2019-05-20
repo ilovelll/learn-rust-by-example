@@ -50,6 +50,9 @@ fn fibonacci() -> Fibonacci {
     Fibonacci { curr: 1, next: 1}
 }
 
+#[derive(Clone, Debug)]
+struct Pair(Box<i32>, Box<i32>);
+
 fn main() {
     let _one_second = Seconds(1);
     let two_seconds = Seconds(2);
@@ -89,4 +92,19 @@ fn main() {
     for i in fibonacci().skip(4).take(4) {
         println!("> {}", i);
     }
+
+    println!("======================================");
+
+    let pair = Pair(Box::new(1), Box::new(2));
+    println!("original: {:?}", pair);
+
+    let moved_pair = pair;
+    println!("copy: {:?}", moved_pair);
+    // println!("original: {:?}", pair);
+
+    let cloned_pair = moved_pair.clone();
+    println!("copy: {:?}", moved_pair);
+    drop(moved_pair);
+
+    println!("clone: {:?}", cloned_pair);
 }

@@ -9,7 +9,8 @@ members = [
   "ch10-modules",
   "ch14-generics",
   "ch15-scoping-rules",
-  "ch16-traits"
+  "ch16-traits",
+  "ch17-macro",
 ]
 [package]
 name = "learn-rust-by-example"
