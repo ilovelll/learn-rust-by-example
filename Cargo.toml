@@ -11,6 +11,7 @@ members = [
   "ch15-scoping-rules",
   "ch16-traits",
   "ch17-macro",
+  "ch18-error-handling",
 ]
 [package]
 name = "learn-rust-by-example"
