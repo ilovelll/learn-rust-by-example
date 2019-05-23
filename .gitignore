@@ -1,7 +1,7 @@
 **/*.exe
 **/*.pdb
 **/*.rlib
-
+**/*/target
 #Added by cargo
 #
 #already existing elements are commented out
